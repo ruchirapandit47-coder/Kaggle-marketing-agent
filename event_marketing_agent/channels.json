@@ -1,0 +1,65 @@
+{
+  "channels": {
+    "LinkedIn Ads": {
+      "cpr": 85.0,
+      "description": "Selected because it provides high-precision targeting for B2B professionals, driving high expected ROI for corporate audiences despite a higher Cost-Per-Registration of $85.00.",
+      "priority": 1
+    },
+    "Google Search Ads": {
+      "cpr": 45.0,
+      "description": "Selected because it captures high-intent searches from prospects actively seeking topics, offering strong conversion rates and a balanced Cost-Per-Registration of $45.00.",
+      "priority": 2
+    },
+    "Meta Ads (FB/IG)": {
+      "cpr": 35.0,
+      "description": "Selected because it reaches broad consumer/community audiences with high visual engagement, maintaining a low Cost-Per-Registration of $35.00 and solid ROI.",
+      "priority": 3
+    },
+    "Tech Newsletters": {
+      "cpr": 50.0,
+      "description": "Selected because it directly reaches niche developer/technology audiences with pre-established trust, leading to high-quality leads at a Cost-Per-Registration of $50.00.",
+      "priority": 4
+    },
+    "TikTok Ads": {
+      "cpr": 25.0,
+      "description": "Selected because it offers low-cost, short-form video reach for youth/consumer segments, optimizing budget with a low Cost-Per-Registration of $25.00.",
+      "priority": 5
+    },
+    "Email Marketing": {
+      "cpr": 10.0,
+      "description": "Selected because it leverages owned lists for maximum ROI, delivering low-cost sign-ups at a minimal Cost-Per-Registration of $10.00.",
+      "priority": 6
+    },
+    "Local Event Listings": {
+      "cpr": 15.0,
+      "description": "Selected because it targets hyper-local community traffic for regional events, offering cheap localized conversions at a Cost-Per-Registration of $15.00.",
+      "priority": 7
+    }
+  },
+  "default_budget_weights": {
+    "developer": {
+      "Tech Newsletters": 0.35,
+      "Google Search Ads": 0.30,
+      "LinkedIn Ads": 0.20,
+      "Email Marketing": 0.15
+    },
+    "b2b": {
+      "LinkedIn Ads": 0.45,
+      "Google Search Ads": 0.30,
+      "Email Marketing": 0.15,
+      "Tech Newsletters": 0.10
+    },
+    "consumer": {
+      "Meta Ads (FB/IG)": 0.40,
+      "TikTok Ads": 0.30,
+      "Local Event Listings": 0.15,
+      "Email Marketing": 0.15
+    },
+    "default": {
+      "Google Search Ads": 0.35,
+      "Meta Ads (FB/IG)": 0.30,
+      "Email Marketing": 0.20,
+      "Local Event Listings": 0.15
+    }
+  }
+}
