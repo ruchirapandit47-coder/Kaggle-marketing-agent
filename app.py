@@ -28,8 +28,8 @@ from event_marketing_agent.agent import root_agent
 
 # Page styling and header
 st.set_page_config(
-    page_title="Event Marketing Intelligence Dashboard",
-    page_icon="📊",
+    page_title="Event Marketing Intelligence Agent",
+    page_icon="🚀",
     layout="wide",
     initial_sidebar_state="expanded"
 )
