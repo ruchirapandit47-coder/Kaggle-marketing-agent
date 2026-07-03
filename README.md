@@ -1,32 +1,62 @@
-# Event Marketing Intelligence Agent
+# 🎯 Event Marketing Intelligence Agent
 
-This project is a graph-based multi-agent system built using **ADK 2.0 (Agent Development Kit)**. It is designed to assist event organizers in planning campaigns, allocating marketing budgets, forecasting registrations, and generating creative assets.
+> An AI-powered multi-agent decision support system built with **Google Agent Development Kit (ADK) 2.0** to help marketing teams plan, evaluate, and optimize event marketing campaigns.
 
-## Project Structure
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Google ADK](https://img.shields.io/badge/Google-ADK%202.0-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-- `event_marketing_agent/agent.py`: Orchestrates the graph-based workflow.
-- `event_marketing_agent/config.py`: Centralized configuration.
-- `event_marketing_agent/tools/budget_tools.py`: Contains marketing allocation and registration forecasting tools.
-- `event_marketing_agent/sub_agents/`: Sub-agents for specific tasks.
-  - `data_budget`: Recommends channels, allocates budget, and forecasts registrations.
-  - `creative_studio`: Generates channel-specific advertising copy.
-  - `risk_compliance`: Audits the budget allocations and copywriting content for potential compliance risks.
+---
 
-## Setup & Running
+# 📖 Overview
 
-1. **Install Poetry**:
-   Ensure you have Poetry installed, then run:
-   ```bash
-   poetry install
-   ```
+Planning successful event marketing campaigns requires balancing multiple business factors including budget allocation, registration goals, audience targeting, campaign messaging, risk assessment, and stakeholder approvals.
 
-2. **Configure environment**:
-   Copy `.env.example` to `.env` and fill in your API Key or Google Cloud credentials:
-   ```bash
-   cp .env.example .env
-   ```
+The **Event Marketing Intelligence Agent** demonstrates how multiple AI agents can collaborate to solve this enterprise problem using **Google Agent Development Kit (ADK) 2.0**.
 
-3. **Run the agent locally**:
-   ```bash
-   poetry run adk run .
-   ```
+Instead of relying on a single LLM, the application coordinates specialized agents that work together to produce data-driven marketing recommendations while keeping a human decision-maker in control.
+
+---
+
+# 🚀 Features
+
+✅ Budget Planning & Channel Allocation
+
+✅ Registration Forecasting
+
+✅ Campaign Feasibility Analysis
+
+✅ Risk & Compliance Assessment
+
+✅ AI-generated Marketing Strategy
+
+✅ Platform-specific Campaign Assets
+
+✅ Human-in-the-Loop Approval
+
+✅ Executive Marketing Report
+
+---
+
+# 🏗 Architecture
+
+```
+
+User Input
+│
+▼
+Director Agent
+│
+├──────────────┐
+│ │ │
+▼ ▼ ▼
+Budget Risk Creative
+Agent Agent Studio
+│ │ │
+└──────┬───────┘
+▼
+Human Approval
+│
+▼
+Executive Report
