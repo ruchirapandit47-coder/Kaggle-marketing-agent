@@ -28,8 +28,8 @@ from event_marketing_agent.agent import root_agent
 
 # Page styling and header
 st.set_page_config(
-    page_title="Event Marketing Intelligence Agent",
-    page_icon="🚀",
+    page_title="Event Marketing Intelligence Dashboard",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -93,54 +93,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main Application Title
-st.title("🚀 Event Marketing Intelligence Agent")
-
-st.markdown("""
-### AI-Powered Multi-Agent Campaign Planning Platform
-
-Plan, evaluate and optimize event marketing campaigns using **Google ADK 2.0**.
-
-This application uses a network of specialized AI agents to:
-
-- 📊 Optimize marketing budget allocation
-- 🎯 Forecast event registrations
-- ⚠ Evaluate campaign risks
-- 🎨 Generate campaign creative strategy
-- 📄 Produce an executive-ready marketing report
-
----
-""")
-
-st.subheader("🤖 Specialized AI Agents")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.info("""
-### 🎯 Director Agent
-
-Coordinates the workflow and combines all agent outputs into one business recommendation.
-""")
-
-    st.success("""
-### 💰 Budget Intelligence Agent
-
-Optimizes marketing budget, forecasts registrations and recommends marketing channels.
-""")
-
-with col2:
-    st.warning("""
-### 🎨 Creative Studio Agent
-
-Generates campaign positioning, messaging strategy and marketing assets.
-""")
-
-    st.error("""
-### ⚠ Risk & Compliance Agent
-
-Evaluates campaign feasibility, business risks and approval recommendations.
-""")
-
+if not st.session_state.get('generated', False):
+    st.markdown("<div class='main-title'>🚀 Event Marketing Intelligence Agent</div>", unsafe_allow_html=True)
+    st.markdown("<div class='subtitle'>AI-Powered Multi-Agent Campaign Planning Platform</div>", unsafe_allow_html=True)
 # Sidebar - Event Brief Inputs
 st.sidebar.markdown("### 📝 Event Brief Input")
 
@@ -405,14 +360,14 @@ if not st.session_state.generated:
     # Welcome / Intro layout
     st.markdown("""
     <div style='background: white; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid #1a73e8; margin-top: 1.5rem;'>
-        <h3 style='color: #1a73e8; margin-top: 0; font-family: "Inter", sans-serif;'>🚀 Event Marketing Intelligence Agent</h3>
+        <h3 style='color: #1a73e8; margin-top: 0; font-family: "Inter", sans-serif;'>Welcome to the Campaign Planner</h3>
         <p style='color: #5f6368; font-size: 1.1rem; line-height: 1.6;'>
-            Plan, evaluate and optimize event marketing campaigns using <b>Google ADK 2.0</b>. This multi-agent platform helps marketing teams optimize budgets, forecast registrations, evaluate campaign risks, generate creative strategies, and produce executive-ready reports.
+            This system runs an interactive <b>ADK 2.0 Graph Workflow</b> to optimize marketing plans. Fill out the brief or select a preset in the sidebar, and run the workflow.
         </p>
         <div style='background: #f8f9fa; border-left: 4px solid #1a73e8; padding: 1rem; border-radius: 4px; margin: 1.5rem 0;'>
             <h5 style='color: #202124; margin: 0 0 0.5rem 0; font-weight: 600;'>Specialized Agents in the Network:</h5>
             <ul style='color: #5f6368; font-size: 0.95rem; margin: 0; padding-left: 1.2rem; line-height: 1.5;'>
-                <li><b>🎯 Director Agent:</b> Coordinates the workflow and combines all specialist agent outputs.</li>
+                <li><b>Event Marketing Director (Orchestrator):</b> Routes the campaign through planning, auditing, and loopback steps.</li>
                 <li><b>Data & Budget Agent:</b> Forecasts registrations and splits budget based on Cost Per Acquisition (CPA) benchmarks.</li>
                 <li><b>Creative Studio Agent:</b> Generates targeted social posts, captions, headlines, and email templates.</li>
                 <li><b>Risk & Compliance Agent:</b> Analyzes budget limits, target realism, and checks for shortfall categories.</li>
@@ -455,7 +410,6 @@ if st.session_state.generated:
     db_result = session.state.get("data_budget_results", {})
     risk_result = session.state.get("risk_assessment_results", {})
     assets = session.state.get("creative_assets", {})
-    print(f"DEBUG APP.PY assets: {str(assets).encode('ascii', errors='replace').decode('ascii')}", flush=True)
 
     allocations = db_result.get("allocations", [])
     summary = db_result.get("summary", {})
