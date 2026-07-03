@@ -93,8 +93,52 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main Application Title
-st.markdown("<div class='main-title'>Event Marketing Intelligence Agent</div>", unsafe_allow_html=True)
-st.markdown("<div class='subtitle'>ADK 2.0 Graph Workflow Planning, Budget Optimization, and Asset Generation</div>", unsafe_allow_html=True)
+st.title("🚀 Event Marketing Intelligence Agent")
+
+st.markdown("""
+### AI-Powered Multi-Agent Campaign Planning Platform
+
+Plan, evaluate and optimize event marketing campaigns using **Google ADK 2.0**.
+
+This application uses a network of specialized AI agents to:
+
+- 📊 Optimize marketing budget allocation
+- 🎯 Forecast event registrations
+- ⚠ Evaluate campaign risks
+- 🎨 Generate campaign creative strategy
+- 📄 Produce an executive-ready marketing report
+
+---
+""")
+st.subheader("🤖 Specialized AI Agents")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.info("""
+### 🎯 Director Agent
+
+Coordinates the workflow and combines all agent outputs into one business recommendation.
+""")
+
+    st.success("""
+### 💰 Budget Intelligence Agent
+
+Optimizes marketing budget, forecasts registrations and recommends marketing channels.
+""")
+
+with col2:
+    st.warning("""
+### 🎨 Creative Studio Agent
+
+Generates campaign positioning, messaging strategy and marketing assets.
+""")
+    
+   st.error("""
+### ⚠ Risk & Compliance Agent
+
+Evaluates campaign feasibility, business risks and approval recommendations.
+""")
 
 # Sidebar - Event Brief Inputs
 st.sidebar.markdown("### 📝 Event Brief Input")
