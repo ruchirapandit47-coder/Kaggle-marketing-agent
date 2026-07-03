@@ -110,6 +110,7 @@ This application uses a network of specialized AI agents to:
 
 ---
 """)
+
 st.subheader("🤖 Specialized AI Agents")
 
 col1, col2 = st.columns(2)
@@ -133,8 +134,8 @@ with col2:
 
 Generates campaign positioning, messaging strategy and marketing assets.
 """)
-    
-   st.error("""
+
+    st.error("""
 ### ⚠ Risk & Compliance Agent
 
 Evaluates campaign feasibility, business risks and approval recommendations.
